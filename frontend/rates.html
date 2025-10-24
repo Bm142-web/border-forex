@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rates - Border Forex Bureau</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>Current Exchange Rates</h2>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <section id="ratesBox">
+    <p>Loading rates...</p>
+  </section>
+
+  <section>
+    <h3>Currency Calculator</h3>
+    <input type="number" id="calcAmount" placeholder="Enter amount">
+    <input type="text" id="calcCurrency" placeholder="Currency code (e.g. USD)">
+    <button id="calcBtn">Calculate</button>
+    <p id="calcResult"></p>
+  </section>
+
+  <footer>
+    <a href="reserve.html">Make a Reservation</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
