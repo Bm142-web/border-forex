@@ -1,0 +1,13 @@
+body{font-family:Arial,sans-serif;background:#f8fafc;margin:0;color:#333}
+header{background:#004aad;color:white;padding:1rem;text-align:center}
+nav{margin-top:.5rem}
+nav button{background:white;border:none;color:#004aad;padding:.6rem 1rem;margin:.3rem;border-radius:5px;cursor:pointer}
+nav button:hover{background:#cce0ff}
+main{max-width:600px;margin:2rem auto;background:white;padding:1.5rem;border-radius:8px;box-shadow:0 0 5px rgba(0,0,0,.1)}
+.page-section{display:none}
+.page-section.active{display:block}
+form{display:flex;flex-direction:column;gap:.8rem}
+input,select,button{padding:.7rem;border:1px solid #ccc;border-radius:5px}
+button{background:#004aad;color:white;cursor:pointer}
+button:hover{background:#003380}
+footer{text-align:center;padding:1rem;color:#777;background:#f1f1f1}

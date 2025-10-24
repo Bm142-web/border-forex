@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Border Forex Bureau</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Border Forex Bureau</h1>
+    <nav>
+      <button class="tab" onclick="showSection('login')">Login</button>
+      <button class="tab" onclick="showSection('register')">Register</button>
+      <button class="tab" onclick="showSection('rates')">Rates</button>
+      <button class="tab" onclick="showSection('calculator')">Calculator</button>
+      <button class="tab" onclick="showSection('reserve')">Reserve</button>
+    </nav>
+  </header>
+  <main>
+    <section id="login" class="page-section active">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginId" placeholder="Passport or ID Number" required />
+        <input type="password" id="loginPass" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMsg"></p>
+    </section>
+    <section id="register" class="page-section">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" id="regName" placeholder="Full Name" required />
+        <input type="text" id="regId" placeholder="Passport or ID Number" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        <input type="password" id="regPass" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerMsg"></p>
+    </section>
+    <section id="rates" class="page-section">
+      <h2>Subsidized Exchange Rates</h2>
+      <div id="rateList"></div>
+    </section>
+    <section id="calculator" class="page-section">
+      <h2>Currency Calculator</h2>
+      <form id="calcForm">
+        <select id="currencyFrom">
+          <option value="USD">USD</option>
+          <option value="KES">KES</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <select id="currencyTo">
+          <option value="KES">KES</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <input type="number" id="amount" placeholder="Enter amount" required />
+        <button type="submit">Calculate</button>
+      </form>
+      <p id="calcResult"></p>
+    </section>
+    <section id="reserve" class="page-section">
+      <h2>Reserve Exchange</h2>
+      <form id="reserveForm">
+        <input type="text" id="resName" placeholder="Full Name" required />
+        <input type="text" id="resId" placeholder="Passport/ID" required />
+        <input type="text" id="resBus" placeholder="Bus Name (optional)" />
+        <input type="number" id="resAmount" placeholder="Amount to Exchange" required />
+        <select id="resCurrency">
+          <option value="USD">USD</option>
+          <option value="KES">KES</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <button type="submit">Reserve</button>
+      </form>
+      <p id="reserveMsg"></p>
+    </section>
+  </main>
+  <footer><p>© 2025 Border Forex Bureau | All Rights Reserved</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
