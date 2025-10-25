@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Border Forex Bureau</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Border Forex</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f8f9fa;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    select {
+      padding: 6px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Welcome to Border Forex Bureau</h1>
-    <nav>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
-      <a href="rates.html">Exchange Rates</a>
-      <a href="reserve.html">Reserve</a>
-    </nav>
+    <h1 id="title">Welcome to Border Forex</h1>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="sw">Swahili</option>
+    </select>
   </header>
 
-  <main>
-    <p>Get the best exchange rates when you travel across borders by bus!</p>
-    <p>Check subsidized rates, calculate conversions, and reserve your exchange in advance.</p>
-  </main>
+  <div class="card">
+    <p id="description">Check real-time exchange rates and make your reservation.</p>
+    <button id="checkRatesBtn">Check Rates</button>
+  </div>
 
-  <footer>
-    <p>© 2025 Border Forex Bureau</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
