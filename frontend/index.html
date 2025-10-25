@@ -4,34 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Border Forex</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f8f9fa;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    select {
-      padding: 6px;
-      font-size: 14px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1 id="title">Welcome to Border Forex</h1>
     <select id="languageSelect">
@@ -40,10 +15,67 @@
     </select>
   </header>
 
-  <div class="card">
-    <p id="description">Check real-time exchange rates and make your reservation.</p>
-    <button id="checkRatesBtn">Check Rates</button>
-  </div>
+  <nav>
+    <button class="navBtn" data-section="home">🏠 <span id="navHome">Home</span></button>
+    <button class="navBtn" data-section="login">🔑 <span id="navLogin">Login</span></button>
+    <button class="navBtn" data-section="register">📝 <span id="navRegister">Register</span></button>
+    <button class="navBtn" data-section="calculator">💱 <span id="navCalculator">Calculator</span></button>
+    <button class="navBtn" data-section="rates">📊 <span id="navRates">Rates</span></button>
+    <button class="navBtn" data-section="reserve">🚌 <span id="navReserve">Reserve</span></button>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="homeSection" class="contentSection active">
+    <p id="homeDesc">Check real-time exchange rates and make your reservation.</p>
+  </section>
+
+  <!-- LOGIN -->
+  <section id="loginSection" class="contentSection">
+    <h2 id="loginTitle">Login</h2>
+    <input type="text" placeholder="Passport or ID Number" id="loginId" />
+    <input type="password" placeholder="Password" id="loginPassword" />
+    <button id="loginBtn">Login</button>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="registerSection" class="contentSection">
+    <h2 id="registerTitle">Create Account</h2>
+    <input type="text" placeholder="Full Name" />
+    <input type="text" placeholder="Passport or ID Number" />
+    <input type="password" placeholder="Password" />
+    <button id="registerBtn">Register</button>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculatorSection" class="contentSection">
+    <h2 id="calcTitle">Exchange Calculator</h2>
+    <label id="calcLabel">Amount:</label>
+    <input type="number" id="amountInput" placeholder="Enter amount" />
+    <button id="calcBtn">Convert</button>
+    <p id="calcResult"></p>
+  </section>
+
+  <!-- RATES -->
+  <section id="ratesSection" class="contentSection">
+    <h2 id="ratesTitle">Exchange Rates</h2>
+    <ul id="ratesList">
+      <li>USD → KES: 128.5</li>
+      <li>EUR → KES: 137.2</li>
+    </ul>
+  </section>
+
+  <!-- RESERVATION -->
+  <section id="reserveSection" class="contentSection">
+    <h2 id="reserveTitle">Make a Reservation</h2>
+    <label id="busLabel">Select Bus:</label>
+    <select id="busSelect">
+      <option>Modern Coast</option>
+      <option>Easy Coach</option>
+      <option>Dreamline</option>
+      <option>Guardian Angel</option>
+    </select>
+    <button id="reserveBtn">Reserve Now</button>
+  </section>
 
   <script src="script.js"></script>
 </body>
